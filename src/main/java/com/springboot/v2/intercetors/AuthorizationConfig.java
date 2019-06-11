@@ -25,13 +25,11 @@ public class AuthorizationConfig {
         permissionEvaluator.setContextInstitutionResolver(contextInstitutionResolver);
         permissionEvaluator.setPermissionsServiceClient(permissionsServiceClient());
         permissionEvaluator.setSecurityContextProvider(securityContextProvider());
-        permissionEvaluator.setDomainFilter("CATALOG");
+        permissionEvaluator.setDomainFilter("CLAIM");
         return permissionEvaluator;
     }*/
 
-    /**
-     * Configure's method-level security using EIDM's authorization infrastructure.
-     */
+
     @Configuration
     @EnableGlobalMethodSecurity(prePostEnabled = true)
     public static class MethodSecurityConfig extends GlobalMethodSecurityConfiguration {

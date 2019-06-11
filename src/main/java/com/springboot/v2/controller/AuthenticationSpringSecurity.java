@@ -1,5 +1,4 @@
-package org.oclc.lhrapi.lhrapiplatform.controller;
-
+package com.springboot.v2.controller;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
