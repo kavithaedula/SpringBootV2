@@ -9,12 +9,12 @@ import java.util.Map;
 @Component("AuthenticationSpringSecurity")
 public class AuthenticationSpringSecurity {
 
-    @PreAuthorize("hasPermission(#, 'group:action')")
+    @PreAuthorize("hasPermission('', 'group:action')")
     public Map isReadClaimAuthenticated(Authentication authentication) {
         return validateAuthentication(authentication);
     }
 
-    @PreAuthorize("hasPermission(#, 'group:action')")
+    @PreAuthorize("hasPermission('', 'group:action')")
     public Map isWriteClaimAuthenticated(Authentication authentication) {
         return validateAuthentication(authentication);
     }
