@@ -6,7 +6,7 @@ Adding Toggling features to Spring boot rest api  .  follow  these  three  steps
       public class JMXFeaturesTogglingConfiguration {
               // this is empty class , used for just enabling the Mbean
        }
-  2. create a java to enable the toggling 
+  2. create a java class to enable the toggling 
   
   example: 
 
