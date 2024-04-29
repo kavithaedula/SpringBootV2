@@ -24,7 +24,7 @@ public class SpringBootController {
 
 
 
-    @RequestMapping(value = "/claim/{claimNo}", method = RequestMethod.GET)
+    @GetMapping(value = "/claim/{claimNo}")
     public ResponseEntity<String> getClaimRecord(@RequestParam Map<String, String> requestParams, @PathVariable(value = "claimNo") String claimNo, HttpServletRequest request, HttpServletResponse response, Authentication authenticationToken) throws Exception {
         if (bean.isGetClaimRecord()) {
             LOG.info("read claim by claim number feature is active");
@@ -38,7 +38,7 @@ public class SpringBootController {
     }
 
 
-    @RequestMapping(value = "/claim", method = RequestMethod.POST)
+    @PostMapping(value = "/claim")
     public ResponseEntity<String> postClaimRecord(@RequestParam Map<String, String> requestParams, final HttpServletRequest request, final HttpServletResponse response, Authentication authenticationToken) throws Exception {
         if (bean.isPostClaimRecord()) {
             LOG.info("add claim by claim number feature is active");
@@ -52,7 +52,7 @@ public class SpringBootController {
     }
 
 
-    @RequestMapping(value = "/claim/{claimNumber}", method = RequestMethod.PUT)
+    @PutMapping(value = "/claim/{claimNumber}")
 
     public ResponseEntity<String> updateClaimRecord(@RequestParam Map<String, String> requestParams, @PathVariable(value = "claimNumber") String claimNumber, final HttpServletRequest request, final HttpServletResponse response, Authentication authenticationToken) throws Exception {
         if (bean.isUpdateClaimRecord()) {
@@ -68,7 +68,7 @@ public class SpringBootController {
 
 
 
-    @RequestMapping(value = "/claim/{claimNumber}", method = RequestMethod.DELETE)
+    @DeleteMapping(value = "/claim/{claimNumber}")
 
     public ResponseEntity<String> deleteClaimRecord(@RequestParam Map<String, String> requestParams, @PathVariable(value = "claimNumber") String claimNumber, final HttpServletRequest request, final HttpServletResponse response, Authentication authenticationToken) throws Exception {
         if (bean.isDeleteClaimRecord()) {
